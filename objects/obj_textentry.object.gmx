@@ -72,11 +72,12 @@ global.keyboard = keyboard_string
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(x,y,keyboard_string)
+            <string>draw_set_halign(fa_left)
+draw_text(x,y,keyboard_string)
 
-for (i = 0; i &lt; ds_list_size(Names); i += 1){  
-    draw_text(x,(y+16*(i+1)),ds_list_find_value(Names,i))
-}
+//for (i = 0; i &lt; ds_list_size(Names); i += 1){  
+//    draw_text(x,(y+16*(i+1)),ds_list_find_value(Names,i))
+//}
 </string>
           </argument>
         </arguments>
