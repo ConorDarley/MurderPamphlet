@@ -44,7 +44,14 @@ if current_hour &lt; 10 {
     hour = string(current_hour)
 }
 
+//Draws the local time of the host computer onto the top righht corner of the screen
 draw_text(x,y,hour + ":" + minute + ":" + second);
+
+//Draws each last name in the list on the right side of the screen
+//for (i = 0; i &lt; ds_list_size(global.Lnames); i += 1)
+//{
+//    draw_text(x,y+(16*(i+1)),ds_list_find_value(array[i],0))
+//}
 </string>
           </argument>
         </arguments>

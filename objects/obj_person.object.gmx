@@ -27,30 +27,17 @@
             <kind>1</kind>
             <string>randomize()
 
-globalvar Fnames;
-global.Fnames = ds_list_create();
-ds_list_empty(Fnames);
-ds_list_add(Fnames, 'Fred', 'John', 'Paul', 'Sam', 'Carson','Hideo','Brendon','Bryon','Boyd','Jerald','Milton','Bernard','Noah','Woodrow','Daryl','Gail','Marlon','Malcolm')
-ds_list_add(Fnames, 'Samantha','Patricia','Shari','Melissa','Beulah','Alberto','Orlando','Christopher','Natasha','Allan','Aubrey','Rafael','Malcolm','Darin','Perry')
-
-globalvar Lnames;
-global.Lnames = ds_list_create();
-ds_list_empty(Lnames);
-ds_list_add(Lnames, 'Samson','Joestar','Miyagi','Kojima','Cullen','Baker','Owens','Lowe','Grant','Green','Wallace','Harrison','Gomez','West','Drake','Blair','Morris')
-ds_list_add(Lnames, 'Osborne','Ortega','Barrett','Todd','Waters','Newton','Robbins','Stanley','Myers','Rodgers','Watson','Page','Curtis','Reid','Martin','Townsend','Garcia')
-
-a = irandom(image_number)
-image_index = a
+image_index = irandom(image_number)
 image_speed = 0
 
 //Pick a random first name from a list
 //Pick a random last name from a list
-a = irandom(ds_list_size(global.Fnames)-1)
-a = ds_list_find_value(global.Fnames, a)
-b = irandom(ds_list_size(global.Lnames)-1)
-b = ds_list_find_value(global.Lnames, b)
+first = irandom(ds_list_size(global.Fnames)-1)
+first = ds_list_find_value(global.Fnames, first)
+last = irandom(ds_list_size(global.Lnames)-1)
+last = ds_list_find_value(global.Lnames, last)
 
-name = string(a) + " " + string(b)
+name = string(first) + " " + string(last)
 ds_list_add(Names, name)
 </string>
           </argument>
@@ -91,29 +78,6 @@ if x &lt; 0+32 or x &gt; 1024-32 or y &lt; 0+32 or y &gt; 768-32 {
 
 //move_wrap(true, false, sprite_width / 2);
 //move_wrap(false, true, sprite_height / 2);
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_person">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>direction += 45
 </string>
           </argument>
         </arguments>
